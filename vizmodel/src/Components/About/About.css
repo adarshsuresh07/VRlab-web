@@ -1,0 +1,13 @@
+.abt{
+    width: 80vw;    
+    margin-left: 5vw;
+    margin-bottom: 5vh;
+    display: flex;
+    flex-direction: column;
+    line-height: 18px;
+}
+
+.text{
+    padding-left: 30px;
+    padding-right: 400px;
+}

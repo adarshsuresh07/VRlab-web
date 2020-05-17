@@ -1,0 +1,13 @@
+.plot {
+    box-sizing: border-box;
+    width: 100%;    
+    margin-left: 5vw;
+    margin-bottom: 5vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.barplot{
+    height:50vh;
+    border: 1px solid black;
+}

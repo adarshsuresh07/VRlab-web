@@ -1,0 +1,52 @@
+  /* img {
+    height: 100vh;
+    width: 100vw; 
+    object-fit: cover;
+    opacity: 0.2;
+  } */
+
+  
+  .hero-image {
+    margin-top: 50px;
+    height: 100vh;
+    width: 100vw; 
+    object-fit: cover;
+    opacity: 0.2;
+    height: 60%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+  }
+  
+  .hero-box {
+    text-align: center;
+    font-size: 23px;
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: rgb(0, 0, 0);
+  }
+
+
+
+  .hero-text{    
+    font-weight: bold;
+    text-align: left;
+    font-size: 23px;
+    position: absolute;
+    top: 60%;
+    left: 35%;
+    transform: translate(-50%, -50%);
+    color: rgb(58, 58, 58);
+  }
+  
+  .intro{
+    height:100%;
+  }
+
+  .logo{
+    height: 100px;
+    width: 100px;
+  }
