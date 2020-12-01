@@ -4,6 +4,8 @@ import PublicRoute from "./Route/Publicroute"
 import { BrowserRouter, Switch } from "react-router-dom";
 import Landing from "./Components/Landing/Landing"
 import Dashboard from "./Components/Dashboard/Dashboard"
+import Teacherdash from "./Components/Teacherdash/Teacherdash"
+
 // import "./App.css"
 import 'bootstrap/dist/css/bootstrap.css';
 import Navbar from './Components/Navbar';
@@ -21,6 +23,7 @@ class App extends Component {
           <Switch>
             <PublicRoute component={Landing} path="/" exact />
             <PublicRoute component={Dashboard} path="/dashboard" exact />
+            <PublicRoute component={Teacherdash} path="/teacherdash" exact />
           </Switch>
         </BrowserRouter>
       </>

@@ -26,7 +26,7 @@ a {
   overflow: hidden;
   width: 20vw;
   height: 100vh;
-	position: absolute; 
+	/* position: absolute;  */
 	left: 0;
 	scroll-behavior: smooth;
   color: white;
@@ -45,20 +45,25 @@ a {
   /* border-radius: 10px; */
 }
 .profile-details {
-  padding-top: 5vw;
-
   border: 2px solid whitesmoke;
-  padding-bottom: 2vw;
   pointer-events: none;
+  padding:1rem;
   border-radius: 10px;
 }
 /* sidebar in dashboard */
 
 /* Table */
+.listexp{
+  width:75%;
+  padding: 2rem;
+  height:100%;
+
+}
+
 #scores {
   font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
   border-collapse: collapse;
-  width: 100%;
+  width: 80%;
 }
 
 #scores td, #scores th {

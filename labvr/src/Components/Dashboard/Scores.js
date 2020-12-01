@@ -4,36 +4,35 @@ class Scores extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            data: [{ id: 23, name: 'some quiz', position: 2, marks: 14 },
-            { id: 1, name: 'Maria Anders', position: 2, marks: 14 },
-            { id: 2, name: 'Germany', position: 2, marks: 14 },
-            { id: 3, name: 'Berglunds snabbköp', position: 2, marks: 14 },
-            { id: 4, name: 'Christina Berglund', position: 2, marks: 14 },
-            { id: 5, name: 'Sweden', position: 2, marks: 14 },
-            { id: 5, name: 'Centro comercial Moctezuma', position: 2, marks: 14 },
-            { id: 6, name: 'Francisco Chang', position: 2, marks: 14 },
-            { id: 7, name: 'Mexico', position: 2, marks: 14 }
+            data: [{ id: 1, name: 'Abhishek Manoharan', email: "mano@gmail.com", time:"45min",marks: 40 },
+            { id: 2, name: 'Abhishek S', email: "shiku@gmail.com", time:"42min",marks: 39 },
+            { id: 3, name: 'Abhishek T', email: "atholi@gmail.com", time:"50min",marks: 37 },
+            { id: 4, name: 'Abin Baby', email: "baby@gmail.com", time:"40min",marks: 35 },
+            { id: 5, name: 'Abinand', email: "monuttan@gmail.com", time:"1hr 05min",marks: 40 },
+            { id: 6, name: 'Adarsh Vijay', email: "vijay@gmail.com", time:"35min",marks: 35 },
+            { id: 7, name: 'Adarsh S', email: "adarsh@gmail.com", time:"15min",marks: 20 },
             ]
         };
         // this.handleSubmit = this.handleSubmit.bind(this);
     }
     render() {
-        var datatable = this.state.data.map((item, key) => <tr><td>{item.name}</td><td>{item.position}</td><td>{item.marks}</td></tr>);
+    var datatable = this.state.data.map((item, key) => <tr><td>{item.name}</td><td>{item.email}</td><td>{item.time}</td><td>{item.marks}</td></tr>);
         return (
             <div className="Scores">
-                <div className="jumbotron" style={{ background: 'white', padding: '5vw' }}>
-                    <div className="row">
+                {/* <div className="jumbotron" style={{ background: 'white', padding: '5vw' }}> */}
+                    {/* <div className="row"> */}
                         <table id="scores">
                             <tr>
-                                <th>Quiz</th>
-                                <th>Position</th>
-                                <th>Marks</th>
+                                <th>Name</th>
+                                <th>Email id</th>
+                                <th>Time taken</th>
+                                <th>Marks obtained</th>
                             </tr>
                             {datatable}
                         </table>
-                    </div>
+                    {/* </div> */}
                     {/* <!--div className="row">haha</div --> */}
-                </div>
+                 {/* </div> */}
             </div>
         );
     }
