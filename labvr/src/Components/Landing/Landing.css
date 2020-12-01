@@ -1,0 +1,139 @@
+.landing-home {
+    height: 100vh;
+    width: 100%;
+}
+
+.landing-div-outer {
+    background-color: #16213e;
+    height: 85vh;
+    margin-top: 7.5vh;
+    margin-left: 5%;
+    width: 90%;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    display: flex;
+}
+
+.landing-div1 {
+    width: 60%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: aqua;
+    font-size: 10vh;
+}
+
+.landing-div2 {
+    width: 40%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.login-buttons {
+    display: flex;
+    flex-direction: row;
+    width: 20vw;
+    flex-wrap: wrap;
+    align-items: baseline;
+    justify-content: space-between;
+}
+
+.login-buttons button {
+    background-color: aqua;
+    color: #16213e;
+    text-shadow: 1px 1px 1px rgba(255, 255, 255, 0.7);
+    width: 12vw;
+    height: 2.5rem;
+    border-radius: 2rem;
+    margin: 1rem;
+    border: 2px solid white;
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.3);
+}
+
+.normal-input {
+    background-color: white;
+    margin: 1rem;
+    width: 20vw;
+    height: 2.5rem;
+    border: none;
+    border-radius: 0.2rem;
+    padding: 0.8rem;
+}
+
+.normal-input:focus {
+    border-bottom: solid 2px aqua;
+}
+
+.switch {
+    position: relative;
+    /* display: inline-block; */
+    width: 70px;
+    height: 30px;
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 2px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+input:checked+.slider {
+    background-color: aqua;
+}
+
+input:focus+.slider {
+    box-shadow: 0 0 1px aqua;
+}
+
+input:checked+.slider:before {
+    -webkit-transform: translateX(36px);
+    -ms-transform: translateX(36px);
+    transform: translateX(36px);
+}
+
+/* Rounded sliders */
+
+.slider.round {
+    border-radius: 30px;
+    background-color: white;
+}
+
+input:checked+.slider.round:before {
+    color: aqua;
+}
+.slider.round:before {
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    content: "T";
+    background-color: #16213e;
+}
