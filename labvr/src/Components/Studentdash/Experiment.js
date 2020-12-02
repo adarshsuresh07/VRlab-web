@@ -13,9 +13,12 @@ export default class Experiment extends Component {
             </Accordion.Toggle>
             <Accordion.Collapse eventKey="0">
               <Card.Body>
-                <ul>Question: inakn na dfin adkf kjj akj a</ul>
-                <ul> Max Score: jkaba</ul>
-                <ul>Due: 12323</ul>
+                <ul>Key: ssb-zzwt-nti</ul>
+                <ul>Under: User Name</ul>
+                <ul>Max Score: 40</ul>
+                <ul>Your Score: 35</ul>
+                <ul>Start Time: 1:45pm</ul>
+                <ul>End Time: 2:25pm</ul>
               </Card.Body>
             </Accordion.Collapse>
           </Card>

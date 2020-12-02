@@ -1,11 +1,11 @@
 import React from 'react'
-import logo from '../../logo.svg';
+import logo from '../../Assets/images/ava.png';
 
 
 class Profile extends React.Component{
     constructor(props){
         super(props);
-        this.state = {profileval:{ name:"sachin",email:"sachin@abc.com"}}
+        this.state = {profileval:{ name:"User Name",email:"emailid@abc.com", college:"ABC College"}}
     }
     render(){
         return (
@@ -15,7 +15,11 @@ class Profile extends React.Component{
                 {this.state.profileval.name}
                 <br/>
                 {this.state.profileval.email}
+                <br/>
+                {this.state.profileval.college}
             </div>
+            <button className="logout">Reset Password</button>
+            <button className="logout">Logout</button>
         </div>
         );
     }

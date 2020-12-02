@@ -28,7 +28,7 @@ class StudentDash extends React.Component {
               <Profile />
             </div>
             <div className="student-right">
-              <div className="stduent-nav">
+              {/* <div className="stduent-nav">
                 <button className="assigned" onClick={this.handleAssigned}>
                   Assigned
                 </button>
@@ -36,7 +36,7 @@ class StudentDash extends React.Component {
                   Finished
                 </button>
               </div>
-              <hr />
+              <hr /> */}
               {this.state.assigned ? <Assigned /> : <Finished />}
             </div>
           </div>

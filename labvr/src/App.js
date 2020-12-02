@@ -22,7 +22,7 @@ class App extends Component {
         <BrowserRouter>
           <Switch>
             <PublicRoute component={Landing} path="/" exact />
-            <PublicRoute component={Dashboard} path="/dashboard" exact />
+            {/* <PublicRoute component={Dashboard} path="/dashboard" exact /> */}
             <PublicRoute component={Teacherdash} path="/teacherdash" exact />
             <PublicRoute component={Studentdash} path="/studentdash" exact />
           </Switch>

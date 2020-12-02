@@ -18,3 +18,24 @@ body:not(.user-is-tabbing) select:focus,
 body:not(.user-is-tabbing) textarea:focus {
   outline: none;
 }
+
+::-webkit-scrollbar {
+  width: 5px;
+  border-radius: 0.3rem;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #16213e; 
+  border-radius: 0.3rem;
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: aqua; 
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: aqua; 
+}
