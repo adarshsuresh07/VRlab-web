@@ -1,0 +1,107 @@
+const mongoose = require("mongoose")
+const Schema = mongoose.Schema
+
+const OpeningSchema = new Schema({
+    key: {
+        type: String
+    },
+    type: {
+        type: String,
+    },
+    result: {
+        type: Object
+    },
+    mark: {
+        type: String,
+    },
+    submitted: {
+        type: Boolean,
+        default: false
+    },
+    created_at: {
+        type: Date,
+        default: Date.now
+    },
+    updated_at: {
+        type: Date,
+        default: Date.now
+    }
+})
+
+module.exports = Experiment = mongoose.model("experiment", OpeningSchema)
+
+//Student
+
+const mongoose = require("mongoose")
+const Schema = mongoose.Schema
+ 
+const UserSchema = new Schema({
+  fullname: {
+    type: String,
+    required: true
+  },
+  email: {
+    type: String,
+    required: true
+  },
+  password: {
+    type: String,
+    required: true
+  },
+  verified: {
+    type: Boolean,
+    default: false
+  },
+  experiments_done: {
+    type: [{id :  mongoose.ObjectId}]
+  },
+  created_at: {
+    type: Date,
+    default: Date.now
+  }
+  updated_at: {
+        type: Date,
+        default: Date.now
+    }
+})
+
+module.exports = Student = mongoose.model("student", UserSchema)
+
+//Teacher
+
+const mongoose = require("mongoose")
+const Schema = mongoose.Schema
+ 
+const UserSchema = new Schema({
+  fullname: {
+    type: String,
+    required: true
+  },
+  email: {
+    type: String,
+    required: true
+  },
+  password: {
+    type: String,
+    required: true
+  },
+  verified: {
+    type: Boolean,
+    default: false
+  },
+  experiments_started: {
+    type: [{id :  mongoose.ObjectId}]
+  },
+  created_at: {
+    type: Date,
+    default: Date.now
+  }
+  updated_at: {
+        type: Date,
+        default: Date.now
+    }
+})
+
+module.exports = Teacher = mongoose.model("teacher", UserSchema)
+
+

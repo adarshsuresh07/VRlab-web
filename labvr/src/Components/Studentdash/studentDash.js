@@ -1,7 +1,7 @@
 import React from "react";
 import Profile from "../Dashboard/Profile";
-import Scores from "../Dashboard/Scores";
-import { Accordion, Card, Button } from "react-bootstrap";
+// import Scores from "../Dashboard/Scores";
+// import { Accordion, Card, Button } from "react-bootstrap";
 import Assigned from "../Studentdash/Assigned";
 import Finished from "../Studentdash/Finished";
 class StudentDash extends React.Component {
@@ -25,7 +25,7 @@ class StudentDash extends React.Component {
         <main>
           <div className="row">
             <div className="sidebar">
-              <Profile />
+              <Profile {...this.props}/>
             </div>
             <div className="student-right">
               {/* <div className="stduent-nav">

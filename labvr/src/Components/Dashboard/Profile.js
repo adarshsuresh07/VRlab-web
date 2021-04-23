@@ -7,6 +7,10 @@ class Profile extends React.Component{
         super(props);
         this.state = {profileval:{ name:"User Name",email:"emailid@abc.com", college:"ABC College"}}
     }
+    logout=()=>{
+        this.props.history.push("/");
+        return false;
+    }
     render(){
         return (
         <div className="profile">
@@ -19,7 +23,7 @@ class Profile extends React.Component{
                 {this.state.profileval.college}
             </div>
             <button className="logout">Reset Password</button>
-            <button className="logout">Logout</button>
+            <button className="logout" onClick={this.logout}>Logout</button>
         </div>
         );
     }

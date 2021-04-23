@@ -1,13 +1,16 @@
 .landing-home {
     height: 100vh;
-    width: 100%;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .landing-div-outer {
     background-color: #16213e;
     height: 85vh;
-    margin-top: 7.5vh;
-    margin-left: 5%;
+    /* margin-top: 7.5vh; */
+    /* margin-left: 5%; */
     width: 90%;
     box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
     display: flex;
@@ -128,6 +131,7 @@ input:checked+.slider:before {
 input:checked+.slider.round:before {
     color: aqua;
 }
+
 .slider.round:before {
     border-radius: 50%;
     display: flex;
@@ -136,4 +140,69 @@ input:checked+.slider.round:before {
     color: white;
     content: "T";
     background-color: #16213e;
+}
+
+/*--------- Navbar ------- */
+
+
+.sidebar-menu {
+    width: 90vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    font-size: 0.9em;
+    margin: 15px;
+}
+
+.sidebar-menu-link {
+    font-weight: bold;
+    margin: 0 10px;
+    border: 2px solid #16213e;
+    padding: 0 5px;
+    min-width: 1.5rem;
+    height: 1.5rem;
+}
+
+.sidebar-menu-link:hover {
+    background-color: #16213e;
+}
+
+
+span {
+    cursor: pointer;
+}
+
+.signup span:after {
+    color: #16213e;
+    content: 'S';
+    transition: 0.2s ease-in;
+}
+
+.signup:hover span:after {
+    color: aqua;
+    content: 'Signup';
+    transition: 0.2s ease-in;
+}
+
+.login span:after {
+    color: #16213e;
+    content: 'L';
+    transition: 0.2s ease-in;
+}
+
+.login:hover span:after {
+    color: aqua;
+    content: 'Login';
+    transition: 0.2s ease-in;
+}
+
+.error-hidden{
+    color: red;
+    opacity: 0;
+    transition: 1s opacity ease-in-out;
+}
+.error-seen{
+    color: red;
+    transition: 1s opacity ease-in-out;
+    opacity: 1;
 }

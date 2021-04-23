@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import Collapsible from "react-collapsible";
+// import Collapsible from "react-collapsible";
 import { Accordion, Card } from "react-bootstrap";
 
 export default class Experiment extends Component {
@@ -27,7 +27,7 @@ export default class Experiment extends Component {
               Experiment 1 - Hooke's law<br></br> 22/11/2020
             </Accordion.Toggle>
             <Accordion.Collapse eventKey="1">
-              <Card.Body>Hi</Card.Body>
+              <Card.Body></Card.Body>
             </Accordion.Collapse>
           </Card>
         </Accordion>

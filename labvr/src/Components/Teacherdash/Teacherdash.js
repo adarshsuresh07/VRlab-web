@@ -1,7 +1,7 @@
 import React from 'react'
 import Profile from '../Dashboard/Profile';
 import Scores from '../Dashboard/Scores';
-import { Accordion, Card, Modal, Button } from 'react-bootstrap'
+import { Accordion, Card, Modal } from 'react-bootstrap'
 class Dashboard extends React.Component {
     constructor(props) {
         super(props);
@@ -20,7 +20,7 @@ class Dashboard extends React.Component {
                 <main>
                     <div className="row">
                         <div className="sidebar">
-                            <Profile />
+                            <Profile {...this.props}/>
                         </div>
                         <div className="listexp">
                             <Accordion defaultActiveKey="0">
