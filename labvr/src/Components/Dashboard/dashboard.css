@@ -1,0 +1,211 @@
+body {
+    overflow: hidden;
+}
+
+a {
+    color: white;
+}
+
+.overlay {
+    background-color: #16213e;
+    display: flex;
+}
+
+.Radio{
+    border: 2px solid aqua;
+    height: 3rem;
+    font-weight: 700;
+}
+.but-left{
+    border-bottom-left-radius: 1.5rem;
+    border-top-left-radius: 1.5rem;
+}
+.but-right{
+    border-bottom-right-radius: 1.5rem;
+    border-top-right-radius: 1.5rem;
+}
+.but-inactive{
+    color:aqua;
+    background-color: #16213e;
+    transition: 0.2s all linear;
+}
+.but-active{
+    background-color:aqua;
+    transition: 0.2s all linear;
+    color: #16213e;
+}
+
+/* sidebar in dashboard */
+
+.sidebar {
+    padding-top: 5vw;
+    background-color: #16213e;
+    overflow: hidden;
+    width: 20vw;
+    height: 100vh;
+    /* position: absolute;  */
+    left: 0;
+    scroll-behavior: smooth;
+    color: white;
+}
+
+.profile {
+    height: 80vh;
+    margin: 1vw;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.Profile-pic {
+    height: 10vw;
+    /* border: 2px solid whitesmoke; */
+    pointer-events: none;
+    margin-bottom: 2rem;
+    border-radius: 100%;
+    /* border-radius: 10px; */
+}
+
+.profile-details {
+    border: 2px solid aqua;
+    pointer-events: none;
+    padding: 1rem;
+    border-radius: 10px;
+}
+
+/* sidebar in dashboard */
+
+/* Table */
+
+.listexp {
+    width: 75%;
+    padding: 2rem;
+    height: 84vh;
+    margin-top: 3rem;
+    border-radius: 0.5rem;
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.4);
+    background-color: white;
+    overflow: auto;
+}
+
+.student-right {
+    width: 75%;
+    padding: 2rem;
+    height: 80vh;
+    background-color: white;
+    margin-top: 3rem;
+    border-radius: 0.5rem;
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.4);
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    overflow: auto;
+}
+
+.logout {
+    width: 8rem;
+    height: 2rem;
+    margin-top: 4rem;
+    border: 2px solid white;
+    background-color: aqua;
+    border-radius: 0.2rem;
+    font-size: 0.8rem;
+}
+
+.startlab {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    z-index: 999;
+    background-color: aqua;
+    height: 10rem;
+    width: 10rem;
+    margin: 2rem;
+    border-radius: 50%;
+    border: 2px solid white;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #16213e;
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.4);
+}
+
+.startlab:hover {
+    border: 3px solid #16213e;
+    transition: 0.5s;
+}
+
+hr {
+    border: 0;
+    clear: both;
+    display: block;
+    width: 100%;
+    background-color: #5f6368;
+    /* height: 1px; */
+}
+
+#scores {
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 80%;
+}
+
+#scores td, #scores th {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+
+#scores tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+#scores tr:hover {
+    background-color: #ddd;
+}
+
+#scores th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: black;
+    color: white;
+}
+
+/* Table */
+
+
+/* code for mobile */
+
+@media only screen and (max-width: 600px) {
+    .sidebar {
+        display: none;
+    }
+    .overlay {
+        overflow-y: scroll;
+    }
+    .profile {
+        width: 100vw;
+        height: 100vh;
+    }
+    .Profile-pic {
+        height: 20vh;
+    }
+    .profile-details {
+        color: white;
+    }
+}
+
+/* code for mobile */
+
+
+
+.modal-copy-link {
+    opacity: 0;
+    transition: 1s opacity ease-in-out;
+  }
+  
+  .modal-show-copy-link {
+    opacity: 1;
+    transition: 1s opacity ease-in-out;
+  }
+  

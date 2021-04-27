@@ -18,10 +18,12 @@ export default class Landing extends React.Component {
     render() {
         return (
             <div className="landing-home">
-                <Navbar changePage={this.switch} currentpage={this.props.history.location.pathname} />
+                {this.props.history.location.pathname === "/login" ||
+                this.props.history.location.pathname === "/signup" ?
+                <Navbar {...this.props} switch={this.switch} />: <div className="sidebar-menu"/>}
                 <div className="landing-div-outer">
                     <div className="landing-div1">
-                        <span>LabVR</span>
+                        <span onClick={() => this.props.history.push("/")} style={{cursor: "pointer"}}>LabVR</span>
                     </div>
                     {
                         this.props.history.location.pathname === "/login" ?
@@ -34,6 +36,8 @@ export default class Landing extends React.Component {
                                         <Forgot switch={this.switch} />
                                         : <div className="landing-div2">
                                             <p style={{ color: "white" }}>Welcome to our webpage</p>
+                                            <button className="logout" onClick={() => this.props.history.push("/login")}>Login</button>
+                                            <button className="logout" onClick={() => this.props.history.push("/signup")}>Signup</button>
                                         </div>
                     }
                 </div>

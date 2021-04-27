@@ -17,7 +17,7 @@
 }
 
 .landing-div1 {
-    width: 60%;
+    width: 50%;
     height: 100%;
     display: flex;
     justify-content: center;
@@ -27,7 +27,7 @@
 }
 
 .landing-div2 {
-    width: 40%;
+    width: 50%;
     height: 100%;
     display: flex;
     flex-direction: column;
@@ -38,7 +38,7 @@
 .login-buttons {
     display: flex;
     flex-direction: row;
-    width: 20vw;
+    width: 17rem;
     flex-wrap: wrap;
     align-items: baseline;
     justify-content: space-between;
@@ -48,18 +48,29 @@
     background-color: aqua;
     color: #16213e;
     text-shadow: 1px 1px 1px rgba(255, 255, 255, 0.7);
-    width: 12vw;
+    width: 11rem;
     height: 2.5rem;
     border-radius: 2rem;
-    margin: 1rem;
+    margin: 0.5rem;
     border: 2px solid white;
     box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.3);
+    font-size: 0.9rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.login-buttons button:disabled {
+    color: aqua;
+    background-color: #16213e;
+    text-shadow: none;
+    border: 3px solid aqua;
 }
 
 .normal-input {
     background-color: white;
     margin: 1rem;
-    width: 20vw;
+    width: 17rem;
     height: 2.5rem;
     border: none;
     border-radius: 0.2rem;
@@ -144,65 +155,61 @@ input:checked+.slider.round:before {
 
 /*--------- Navbar ------- */
 
-
 .sidebar-menu {
     width: 90vw;
+    height: 2rem;
     display: flex;
-    flex-direction: row;
+    align-items: flex-end;
     justify-content: flex-end;
-    font-size: 0.9em;
-    margin: 15px;
+    margin: 1rem;
 }
 
-.sidebar-menu-link {
-    font-weight: bold;
-    margin: 0 10px;
-    border: 2px solid #16213e;
-    padding: 0 5px;
-    min-width: 1.5rem;
-    height: 1.5rem;
+.sidebar-menu .Radio {
+    border: 2px solid aqua;
+    height: 2rem;
+    font-weight: 700;
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.3);
+    padding: 0.3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-.sidebar-menu-link:hover {
+.sidebar-menu .but-left {
+    border-bottom-left-radius: 1rem;
+    border-top-left-radius: 1rem;
+}
+
+.sidebar-menu .but-right {
+    border-bottom-right-radius: 1rem;
+    border-top-right-radius: 1rem;
+}
+
+.sidebar-menu .but-active {
+    color: aqua;
     background-color: #16213e;
+    transition: 0.2s all linear;
 }
 
-
-span {
-    cursor: pointer;
-}
-
-.signup span:after {
+.sidebar-menu .but-inactive {
+    background-color: aqua;
+    transition: 0.2s all linear;
     color: #16213e;
-    content: 'S';
-    transition: 0.2s ease-in;
 }
 
-.signup:hover span:after {
-    color: aqua;
-    content: 'Signup';
-    transition: 0.2s ease-in;
-}
-
-.login span:after {
-    color: #16213e;
-    content: 'L';
-    transition: 0.2s ease-in;
-}
-
-.login:hover span:after {
-    color: aqua;
-    content: 'Login';
-    transition: 0.2s ease-in;
-}
-
-.error-hidden{
+.error-hidden {
     color: red;
     opacity: 0;
-    transition: 1s opacity ease-in-out;
 }
-.error-seen{
+
+.error-seen {
     color: red;
-    transition: 1s opacity ease-in-out;
+    transition: 0.5s opacity ease-in-out;
     opacity: 1;
+    display: flex;
+    align-items: center;
+}
+
+a {
+    cursor: pointer;
 }

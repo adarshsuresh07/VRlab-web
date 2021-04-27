@@ -5,9 +5,6 @@ const OpeningSchema = new Schema({
     key: {
         type: String
     },
-    type: {
-        type: String,
-    },
     result: {
         type: Object
     },
@@ -17,6 +14,9 @@ const OpeningSchema = new Schema({
     submitted: {
         type: Boolean,
         default: false
+    },
+    done_by:{
+          type: String
     },
     created_at: {
         type: Date,
@@ -28,8 +28,30 @@ const OpeningSchema = new Schema({
     }
 })
 
-module.exports = Experiment = mongoose.model("experiment", OpeningSchema)
+module.exports = Result = mongoose.model("experiment", OpeningSchema)
 
+//Experiment Schema
+
+const mongoose = require("mongoose")
+const Schema = mongoose.Schema
+
+const OpeningSchema = new Schema({
+    key: {
+        type: String
+    },
+    created_by:{
+        type: String
+    },
+    type: {
+        type: String,
+    },
+    created_at: {
+        type: Date,
+        default: Date.now
+    },
+})
+
+module.exports = Experiment = mongoose.model("experiment", OpeningSchema)
 //Student
 
 const mongoose = require("mongoose")

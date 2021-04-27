@@ -1,5 +1,6 @@
 import React from "react";
 import { loginu, logina } from "../../utils/Token"
+import Loader from "react-loader-spinner";
 import axios from 'axios'
 export default class Login extends React.Component {
     constructor(props) {
@@ -25,15 +26,18 @@ export default class Login extends React.Component {
             .then(res => {
                 const token = res.data.token;
                 this.state.teacher ? logina(token) : loginu(token);
-                // console.log(res);
+                this.state.teacher ? this.props.switch("/teacherdash") : this.props.switch("/studentdash");
+                console.log(res);
             })
             .catch(error => {
-                if (error.response && error.response.data.msg){
+                if (error.response && error.response.data.msg) {
                     this.setState({ error: error.response.data.msg });
-                    document.getElementById("login-error").className="error-seen";
+                    if (document.getElementById("login-error"))
+                        document.getElementById("login-error").className = "error-seen";
                     setTimeout(() => {
-                        document.getElementById("login-error").className="error-hidden";
-                        this.setState({error:" "});
+                        if (document.getElementById("login-error"))
+                            document.getElementById("login-error").className = "error-hidden";
+                        this.setState({ error: " " });
                     }, 5000);
                 }
             }).finally(() => {
@@ -43,7 +47,16 @@ export default class Login extends React.Component {
     render() {
         return (
             <form className="landing-div2" onSubmit={this.Userlogin}>
-                <small id="login-error" className="error-hidden">{this.state.error}</small>
+                <small id="login-error" className="error-hidden">
+                    <Loader
+                        type="Puff"
+                        color="red"
+                        height={18}
+                        width={18}
+                    // timeout={3000} //3 secs
+                    /> &nbsp;
+                    {this.state.error}
+                </small>
                 <input className="normal-input" type="email" onChange={e => this.setState({ email: e.target.value })} placeholder="Email" required />
                 <input className="normal-input" type="password" onChange={e => this.setState({ password: e.target.value })} placeholder="Password" required />
                 <div className="login-buttons">
@@ -51,10 +64,21 @@ export default class Login extends React.Component {
                         <input type="checkbox" onChange={() => this.setState({ teacher: !this.state.teacher })} />
                         <span className="slider round"></span>
                     </label>
-                    <button type="submit" >Login as {this.state.teacher ? "Teacher" : "Student"}</button>
+                    <button type="submit" disabled={this.state.loading}>
+                        {this.state.loading ? <Loader
+                            type="TailSpin"
+                            color="aqua"
+                            height={18}
+                            width={18}
+                        // timeout={3000} //3 secs
+                        /> : null}
+                     &nbsp;
+                        Login as {this.state.teacher ? "Teacher" : "Student"}
+                    </button>
                 </div>
-                <a style={{ color: "aqua" }} href="\send-email">Forgot password?</a>
+                <a style={{ color: "aqua" }} onClick={() => this.props.switch("/send-email")}>Forgot password?</a>
             </form>
         );
     }
 }
+

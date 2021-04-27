@@ -1,11 +1,11 @@
 import React, { Component } from "react";
-import PublicRoute from "./Route/Publicroute";
+import PublicRoute from "./Route/Publicroute.jsx";
 import { BrowserRouter, Switch } from "react-router-dom";
-import Landing from "./Components/Landing/Landing";
-import Teacherdash from "./Components/Teacherdash/Teacherdash";
-import Studentdash from "./Components/Studentdash/studentDash";
+import Landing from "./Components/Landing/Landing.jsx";
+import Teacherdash from "./Components/Teacherdash/Teacherdash.jsx";
+import Studentdash from "./Components/Studentdash/studentDash.jsx";
 import "bootstrap/dist/css/bootstrap.css";
-
+import "react-loader-spinner/dist/loader/css/react-spinner-loader.css";
 class App extends Component {
   render() {
     return (
