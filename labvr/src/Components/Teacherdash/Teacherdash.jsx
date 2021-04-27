@@ -178,7 +178,7 @@ class Dashboard extends React.Component {
                                 style={{ backgroundColor: "#16213e", color: "aqua" }}
                             >
                                 <p>
-                                    Students like reading text answers! Try typing out your answers or add a short text summary in addition to the image of your answer.
+                                    To study variation of time period of a simple pendulum of a given length by taking bobs of same size but different masses and interpret the result
                                 </p>
                             </Modal.Body>
                             :
@@ -186,7 +186,7 @@ class Dashboard extends React.Component {
                                 style={{ backgroundColor: "#16213e", color: "aqua" }}
                             >
                                 <p>
-                                    &emsp;eoj-jqaq-zdn
+                                    To prove Hooke’s law i.e. the extension of the force is directly proportional to the force applied.
                                 </p>
                             </Modal.Body>
                         }
