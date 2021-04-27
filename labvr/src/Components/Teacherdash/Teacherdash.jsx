@@ -140,61 +140,61 @@ class Dashboard extends React.Component {
                                     <i title="Copy to clipboard" className="fa fa-clipboard" aria-hidden="true"></i>
                                 </span>
                                 &emsp; &emsp; &emsp;
-                                <span style={{ fontSize: "1rem", fontStrength:"bold"}}>
+                                <span style={{ fontSize: "1rem", fontStrength: "bold" }}>
                                     {this.state.key}
                                 </span>
                             </div>
-                        <small className="modal-copy-link" id="copy-clip" style={{ color: "aqua" }}>Key copied to Clipboard!</small>
+                            <small className="modal-copy-link" id="copy-clip" style={{ color: "aqua" }}>Key copied to Clipboard!</small>
                         </Modal.Body>
                         {/* <Modal.Footer>
                                 <Button onClick={this.closeModal}>Close</Button>
                             </Modal.Footer> */}
                     </Modal> :
-        <Modal
-            show={this.state.show}
-            onHide={this.closeModal}
-            size="md"
-            aria-labelledby="contained-modal-title-vcenter"
-            centered
-        >
-            <Modal.Header
-                style={{ backgroundColor: "#16213e", color: "aqua" }}
-                closeButton>
-                <button
-                    className={"Radio but-left " + (this.state.type === "pendulum" ? "but-active" : "but-inactive")}
-                    onClick={() => this.setState({ type: "pendulum" })}
-                >
-                    Pendulum
+                    <Modal
+                        show={this.state.show}
+                        onHide={this.closeModal}
+                        size="md"
+                        aria-labelledby="contained-modal-title-vcenter"
+                        centered
+                    >
+                        <Modal.Header
+                            style={{ backgroundColor: "#16213e", color: "aqua" }}
+                            closeButton>
+                            <button
+                                className={"Radio but-left " + (this.state.type === "pendulum" ? "but-active" : "but-inactive")}
+                                onClick={() => this.setState({ type: "pendulum" })}
+                            >
+                                Pendulum
                             </button>
-                <button
-                    className={"Radio but-right " + (this.state.type === "pendulum" ? "but-inactive" : "but-active")}
-                    onClick={() => this.setState({ type: "Hooke's law" })}
-                >
-                    Hooke's law
+                            <button
+                                className={"Radio but-right " + (this.state.type === "pendulum" ? "but-inactive" : "but-active")}
+                                onClick={() => this.setState({ type: "Hooke's law" })}
+                            >
+                                Hooke's law
                             </button>
-            </Modal.Header>
-            {this.state.type === "pendulum" ?
-                <Modal.Body
-                    style={{ backgroundColor: "#16213e", color: "aqua" }}
-                >
-                    <p>
-                        Students like reading text answers! Try typing out your answers or add a short text summary in addition to the image of your answer.
+                        </Modal.Header>
+                        {this.state.type === "pendulum" ?
+                            <Modal.Body
+                                style={{ backgroundColor: "#16213e", color: "aqua" }}
+                            >
+                                <p>
+                                    Students like reading text answers! Try typing out your answers or add a short text summary in addition to the image of your answer.
                                 </p>
-                </Modal.Body>
-                :
-                <Modal.Body
-                    style={{ backgroundColor: "#16213e", color: "aqua" }}
-                >
-                    <p>
-                        &emsp;eoj-jqaq-zdn
+                            </Modal.Body>
+                            :
+                            <Modal.Body
+                                style={{ backgroundColor: "#16213e", color: "aqua" }}
+                            >
+                                <p>
+                                    &emsp;eoj-jqaq-zdn
                                 </p>
-                </Modal.Body>
-            }
-            <Modal.Footer style={{ backgroundColor: "#16213e", color: "aqua" }}>
-                <button className="logout" onClick={() => this.createKey()}>Generate Key</button>
-            </Modal.Footer>
-        </Modal>
-    }
+                            </Modal.Body>
+                        }
+                        <Modal.Footer style={{ backgroundColor: "#16213e", color: "aqua" }}>
+                            <button className="logout" style={{ margin: "0" }} onClick={() => this.createKey()}>Generate Key</button>
+                        </Modal.Footer>
+                    </Modal>
+                }
             </div>
 
         );
