@@ -30,8 +30,10 @@ export default class Login extends React.Component {
                 console.log(res);
             })
             .catch(error => {
-                if (error.response && error.response.data.msg) {
-                    this.setState({ error: error.response.data.msg });
+                console.log(error.response);
+                if (error.response && (error.response.data.msg || error.response.data.message )) {
+                    if(error.response.data.msg) this.setState({ error: error.response.data.msg });
+                    else this.setState({ error: error.response.data.message });
                     if (document.getElementById("login-error"))
                         document.getElementById("login-error").className = "error-seen";
                     setTimeout(() => {
@@ -76,7 +78,7 @@ export default class Login extends React.Component {
                         Login as {this.state.teacher ? "Teacher" : "Student"}
                     </button>
                 </div>
-                <a style={{ color: "aqua" }} onClick={() => this.props.switch("/send-email")}>Forgot password?</a>
+                <a style={{ color: "aqua", marginTop: "20px" }} onClick={() => this.props.switch("/send-email")}>Forgot password?</a>
             </form>
         );
     }

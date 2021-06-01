@@ -39,7 +39,7 @@ class Dashboard extends React.Component {
     }
 
     createKey = () => {
-        this.setState({ key: "abcdef" });
+        this.setState({ key: "exchl9" });
         // this.setState({ loading: true });
         // axios.post("https://vrlabserver.herokuapp.com/api/experiment/create/" + getTokena(),
         //     {

@@ -213,3 +213,16 @@ input:checked+.slider.round:before {
 a {
     cursor: pointer;
 }
+
+@media only screen and (max-width: 600px) {
+    .landing-div-outer{
+        flex-direction: column;
+        align-items: center;
+    }
+    .landing-div1{
+        height: 30%;
+    }
+    .landing-div2{
+        height: 50%;
+    }
+}

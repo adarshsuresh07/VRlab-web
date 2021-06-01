@@ -86,7 +86,7 @@ export default class Login extends React.Component {
     render() {
         return (
             <form className="landing-div2" onSubmit={this.signup}>
-                <small id="login-error" className="error-hidden">
+                <small id="login-error" className={this.state.perror || this.state.cerror? "error-seen": "error-hidden"}>
                     <Loader
                         type="Puff"
                         color="red"
