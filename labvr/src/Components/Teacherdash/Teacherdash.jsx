@@ -68,8 +68,7 @@ class Dashboard extends React.Component {
                 }
             })
             .then(res => {
-                console.log(res.data);
-                this.setState({ key: res.data.key.slice(4) });
+                this.setState({ key: res.data.key });
             })
             .catch(error => {
                 console.log(error.response);
