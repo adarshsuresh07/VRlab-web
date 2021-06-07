@@ -54,14 +54,23 @@ export default class Forpass extends React.Component {
     }
     render() {
         return (
-            <form className="landing-div2" onSubmit={this.reset}>
-                <small style={{ color: "red" }}>{this.state.error}</small>
-                <input type="password" className="normal-input" placeholder="Password" onChange={this.validatePassword} required />
-                <input type="password" className="normal-input" placeholder="Confirm Password" onChange={this.validateCPassword} required />
-                <div className="login-buttons">
-                    <button type="submit">Reset Password</button>
+            <div className="landing-home">
+                <div className="sidebar-menu" />
+                <div className="landing-div-outer">
+                    <div className="landing-div1">
+                        <span onClick={() => this.props.history.push("/")} style={{ cursor: "pointer" }}>LabVR</span>
+                    </div>
+
+                    <form className="landing-div2" onSubmit={this.reset}>
+                        <small style={{ color: "red" }}>{this.state.error}</small>
+                        <input type="password" className="normal-input" placeholder="Password" onChange={this.validatePassword} required />
+                        <input type="password" className="normal-input" placeholder="Confirm Password" onChange={this.validateCPassword} required />
+                        <div className="login-buttons">
+                            <button type="submit">Reset Password</button>
+                        </div>
+                    </form>
                 </div>
-            </form>
+            </div >
         );
     }
 }

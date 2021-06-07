@@ -31,8 +31,8 @@ export default class Login extends React.Component {
             })
             .catch(error => {
                 console.log(error.response);
-                if (error.response && (error.response.data.msg || error.response.data.message )) {
-                    if(error.response.data.msg) this.setState({ error: error.response.data.msg });
+                if (error.response && (error.response.data.msg || error.response.data.message)) {
+                    if (error.response.data.msg) this.setState({ error: error.response.data.msg });
                     else this.setState({ error: error.response.data.message });
                     if (document.getElementById("login-error"))
                         document.getElementById("login-error").className = "error-seen";
@@ -63,7 +63,7 @@ export default class Login extends React.Component {
                 <input className="normal-input" type="password" onChange={e => this.setState({ password: e.target.value })} placeholder="Password" required />
                 <div className="login-buttons">
                     <label className="switch">
-                        <input type="checkbox" onChange={() => this.setState({ teacher: !this.state.teacher })} />
+                        <input type="checkbox" value={this.state.teacher?0:1} onChange={() => { if (!this.state.loading) this.setState({ teacher: !this.state.teacher }) }} />
                         <span className="slider round"></span>
                     </label>
                     <button type="submit" disabled={this.state.loading}>

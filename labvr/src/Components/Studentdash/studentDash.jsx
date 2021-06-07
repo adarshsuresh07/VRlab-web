@@ -5,7 +5,7 @@ import axios from "axios"
 import LoaderPage from "../Loader/Loader"
 // import Scores from "../Dashboard/Scores";
 // import { Accordion, Card, Button } from "react-bootstrap";
-import Finished from "./Finished.jsx";
+import Experiment from "./Experiment.jsx";
 import "../Dashboard/dashboard.css"
 class StudentDash extends React.Component {
   constructor(props) {
@@ -13,7 +13,10 @@ class StudentDash extends React.Component {
     this.state = {
       assigned: true,
       details: null,
-      loading: false
+      loading: false,
+      experiments: [],
+      showsubmitted: true,
+      showunsubmitted: true
     };
   }
   componentDidMount() {
@@ -25,7 +28,20 @@ class StudentDash extends React.Component {
         }
       })
       .then(res => {
-        console.log(res.data);
+        axios.post("https://vrlabserver.herokuapp.com/api/experiment/student/read/" + getTokenu(), {},
+          {
+            headers: {
+              'authorization': "token " + getTokenu()
+            }
+          })
+          .then(res => {
+            this.setState({ experiments: res.data });
+          })
+          .catch(error => {
+            console.log(error.response);
+            if (error.response && error.response.data.msg)
+              console.log(error.reponse.data);
+          })
         this.setState({ details: res.data });
       })
       .catch(error => {
@@ -49,10 +65,18 @@ class StudentDash extends React.Component {
       <div className="overlay">
         {this.state.loading ? <LoaderPage /> : <></>}
         <div className="sidebar">
-          <Profile {...this.props} details={this.state.details} teacher={false} />
+          <Profile
+            {...this.props}
+            details={this.state.details}
+            teacher={false}
+            showSubmitted={() => this.setState({ showsubmitted: !this.state.showsubmitted })}
+            showUnSubmitted={() => this.setState({ showunsubmitted: !this.state.showunsubmitted })}
+            showsubmitted={this.state.showsubmitted}
+            showunsubmitted={this.state.showunsubmitted}
+          />
         </div>
         <div className="student-right">
-          <Finished />
+          <Experiment experiments={this.state.experiments} showsubmitted={this.state.showsubmitted} showunsubmitted={this.state.showunsubmitted} />
         </div>
       </div>
     );

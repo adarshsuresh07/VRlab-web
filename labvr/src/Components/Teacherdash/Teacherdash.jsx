@@ -5,6 +5,7 @@ import LoaderPage from "../Loader/Loader"
 import "../Dashboard/dashboard.css"
 import { getTokena } from "../../utils/Token"
 import axios from "axios"
+import Experiment from "./Experiment"
 import { Accordion, Card, Modal } from 'react-bootstrap'
 class Dashboard extends React.Component {
     constructor(props) {
@@ -14,7 +15,8 @@ class Dashboard extends React.Component {
             details: null,
             type: 'pendulum',
             key: null,
-            loading: false
+            loading: false,
+            experiment: {},
         }
     }
     componentDidMount() {
@@ -27,6 +29,20 @@ class Dashboard extends React.Component {
             })
             .then(res => {
                 console.log(res.data);
+                axios.post("https://vrlabserver.herokuapp.com/api/experiment/teacher/read/" + getTokena(), {},
+                    {
+                        headers: {
+                            'authorization': "token " + getTokena()
+                        }
+                    })
+                    .then(res => {
+                        this.setState({ experiment: res.data });
+                    })
+                    .catch(error => {
+                        console.log(error.response);
+                        if (error.response && error.response.data.msg)
+                            console.log(error.reponse.data);
+                    })
                 this.setState({ details: res.data });
             })
             .catch(error => {
@@ -39,29 +55,29 @@ class Dashboard extends React.Component {
     }
 
     createKey = () => {
-        this.setState({ key: "exchl9" });
-        // this.setState({ loading: true });
-        // axios.post("https://vrlabserver.herokuapp.com/api/experiment/create/" + getTokena(),
-        //     {
-        //         email: this.state.details.email,
-        //         type: this.state.type
-        //     },
-        //     {
-        //         headers: {
-        //             'authorization': "token " + getTokena()
-        //         }
-        //     })
-        //     .then(res => {
-        //         console.log(res.data);
-        //         this.setState({ key: res.data.key.slice(4) });
-        //     })
-        //     .catch(error => {
-        //         console.log(error.response);
-        //         if (error.response && error.response.data.msg)
-        //             console.log(error.reponse.data);
-        //     }).finally(() => {
-        //         this.setState({ loading: false });
-        //     })
+        // this.setState({ key: "exchl9" });
+        this.setState({ loading: true });
+        axios.post("https://vrlabserver.herokuapp.com/api/experiment/teacher/create/" + getTokena(),
+            {
+                email: this.state.details.email,
+                type: this.state.type
+            },
+            {
+                headers: {
+                    'authorization': "token " + getTokena()
+                }
+            })
+            .then(res => {
+                console.log(res.data);
+                this.setState({ key: res.data.key.slice(4) });
+            })
+            .catch(error => {
+                console.log(error.response);
+                if (error.response && error.response.data.msg)
+                    console.log(error.reponse.data);
+            }).finally(() => {
+                this.setState({ loading: false });
+            })
     }
 
     closeModal = () => {
@@ -85,6 +101,7 @@ class Dashboard extends React.Component {
         }, 3000);
     }
 
+
     render() {
         return (
             <div className="overlay">
@@ -93,28 +110,7 @@ class Dashboard extends React.Component {
                     <Profile {...this.props} details={this.state.details} teacher={true} />
                 </div>
                 <div className="listexp">
-                    <Accordion defaultActiveKey="0">
-                        <Card>
-                            <Accordion.Toggle as={Card.Header} eventKey="0">
-                                Experiment 2 - Pendulum<br></br> 29/11/2020
-                                    </Accordion.Toggle>
-                            <Accordion.Collapse eventKey="0">
-                                <Card.Body>
-                                    <Scores />
-                                </Card.Body>
-                            </Accordion.Collapse>
-                        </Card>
-                        <Card>
-                            <Accordion.Toggle as={Card.Header} eventKey="1">
-                                Experiment 1 - Hooke's law<br></br> 22/11/2020
-                                    </Accordion.Toggle>
-                            <Accordion.Collapse eventKey="1">
-                                <Card.Body>
-                                    <Scores />
-                                </Card.Body>
-                            </Accordion.Collapse>
-                        </Card>
-                    </Accordion>
+                    <Experiment experiments={this.state.experiment}/>
                 </div>
                 <button className="startlab" onClick={this.closeModal}>Start Lab</button>
                 {this.state.key ?
