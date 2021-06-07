@@ -13,7 +13,7 @@ class Dashboard extends React.Component {
         this.state = {
             show: false,
             details: null,
-            type: 'pendulum',
+            type: 'simple-pendulum',
             key: null,
             loading: false,
             experiment: {},
@@ -157,19 +157,19 @@ class Dashboard extends React.Component {
                             style={{ backgroundColor: "#16213e", color: "aqua" }}
                             closeButton>
                             <button
-                                className={"Radio but-left " + (this.state.type === "pendulum" ? "but-active" : "but-inactive")}
-                                onClick={() => this.setState({ type: "pendulum" })}
+                                className={"Radio but-left " + (this.state.type === "simple-pendulum" ? "but-active" : "but-inactive")}
+                                onClick={() => this.setState({ type: "simple-pendulum" })}
                             >
-                                Pendulum
+                                Simple Pendulum
                             </button>
                             <button
-                                className={"Radio but-right " + (this.state.type === "pendulum" ? "but-inactive" : "but-active")}
-                                onClick={() => this.setState({ type: "Hooke's law" })}
+                                className={"Radio but-right " + (this.state.type === "simple-pendulum" ? "but-inactive" : "but-active")}
+                                onClick={() => this.setState({ type: "hookes-law" })}
                             >
                                 Hooke's law
                             </button>
                         </Modal.Header>
-                        {this.state.type === "pendulum" ?
+                        {this.state.type === "simple-pendulum" ?
                             <Modal.Body
                                 style={{ backgroundColor: "#16213e", color: "aqua" }}
                             >
