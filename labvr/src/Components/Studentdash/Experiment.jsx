@@ -49,8 +49,8 @@ export default class Experiment extends Component {
                           <div className="accordion-data">
                             <span>Key: {experiment.result.key}</span>
                             <span>Under: {experiment.experiment?.created_by}</span>
-                            <span>Max Score: 40</span>
-                            <span>Your Score: 35</span>
+                            {/* <span>Max Score: 40</span>
+                            <span>Your Score: 35</span> */}
                             <span>Start Time: {this.toStandard(experiment.result.created_at)}</span>
                             <span>End Time: {this.toStandard(experiment.result.updated_at)}</span>
                           </div>
