@@ -13,7 +13,8 @@ export default class Login extends React.Component {
             cerror: '',
             error: '',
             loading: false,
-            teacher: false
+            teacher: false,
+            success: ''
         }
     }
     signup = (e) => {
@@ -31,7 +32,13 @@ export default class Login extends React.Component {
                 .post("https://vrlabserver.herokuapp.com/api/register", data)
                 .then(res => {
                     console.log(res);
-                    // this.props.switch("\login");
+                    this.setState({ success: "Signup Successful! Verify through mail" });
+                    document.getElementById("login-error").className = "success-seen";
+                    setTimeout(() => {
+                        document.getElementById("login-error").className = "error-hidden";
+                        this.setState({ success: '' });
+                        this.props.switch("\login");
+                    }, 4000);
                 })
                 .catch(error => {
                     if (error.response && error.response.data.msg) {
@@ -86,15 +93,15 @@ export default class Login extends React.Component {
     render() {
         return (
             <form className="landing-div2" onSubmit={this.signup}>
-                <small id="login-error" className={this.state.perror || this.state.cerror? "error-seen": "error-hidden"}>
+                <small id="login-error" className={this.state.perror || this.state.cerror ? "error-seen" : "error-hidden"}>
                     <Loader
                         type="Puff"
-                        color="red"
+                        color={this.state.success ? "aqua" : "red"}
                         height={18}
                         width={18}
                     // timeout={3000} //3 secs
                     /> &nbsp;
-                    {this.state.error}
+                    {this.state.success ? this.state.success : this.state.error}
                 </small>
                 <input type="text" className="normal-input" placeholder="Full Name" onChange={e => this.setState({ fullname: e.target.value })} required />
                 <input type="email" className="normal-input" placeholder="Email Id" onChange={e => this.setState({ email: e.target.value })} required />
