@@ -65,16 +65,16 @@ Signup            |  Login
 
  - [x] Teacher 
     -  Only access to web application
-     <img src="https://github.com/adarshsuresh07/VRlab-web/blob/master/Screenshots/Teacherdash.png" width="80%"/>
     - Start an experiment, fetch key and share it to students via another medium.
     - View and evaluate results of students
+<img src="https://github.com/adarshsuresh07/VRlab-web/blob/master/Screenshots/Teacherdash.png" width="80%"/>
 
 Clicking on start button          |  Key generation
 :-------------------------:|:-------------------------:
  <img src="https://github.com/adarshsuresh07/VRlab-web/blob/master/Screenshots/start1.png" width="100%"/>|  <img src="https://github.com/adarshsuresh07/VRlab-web/blob/master/Screenshots/key2.png" width="100%"/>
 
 
-Experiment expansion           |  Click on student
+Experiment expansion           |  Clicking on student
 :-------------------------:|:-------------------------:
  <img src="https://github.com/adarshsuresh07/VRlab-web/blob/master/Screenshots/ep1.png" width="100%"/>|  <img src="https://github.com/adarshsuresh07/VRlab-web/blob/master/Screenshots/ep2.png" width="100%"/>
 
@@ -86,8 +86,37 @@ Experiment expansion           |  Click on student
     - Then an MCQ (like a viva) will appear and we have to choosing an option will end your lab session with logging you out.
     -  View the results of their previous sessions via web application.
     -  Filter their experiments on the besis of the status (Submitted/Pending).
-     
+Student dashboard        |  Clicking on each experiment
+:-------------------------:|:-------------------------:
+ <img src="https://github.com/adarshsuresh07/VRlab-web/blob/master/Screenshots/studdash1.png" width="100%"/>|  <img src="https://github.com/adarshsuresh07/VRlab-web/blob/master/Screenshots/studdash2.png" width="100%"/>
+
+ - [x] VR application
+
+Login         |  Entering key 
+:-------------------------:|:-------------------------:
+ <img src="https://github.com/adarshsuresh07/VRlab-web/blob/master/Screenshots/labvr1.png" width="100%"/>|  <img src="https://github.com/adarshsuresh07/VRlab-web/blob/master/Screenshots/labvr2.png" width="100%"/>
+
+
+Simple Pendulum         |  Simple pendulum (HMD view)
+:-------------------------:|:-------------------------:
+ <img src="https://github.com/adarshsuresh07/VRlab-web/blob/master/Screenshots/labvr9.png" width="100%"/>|  <img src="https://github.com/adarshsuresh07/VRlab-web/blob/master/Screenshots/labvr3.png" width="100%"/>
  
+Hooke's Law        |  Hooke's Law (HMD view)
+:-------------------------:|:-------------------------:
+ <img src="https://github.com/adarshsuresh07/VRlab-web/blob/master/Screenshots/labvr8.png" width="100%"/>|  <img src="https://github.com/adarshsuresh07/VRlab-web/blob/master/Screenshots/hookes_law.png" width="100%"/>
+
+ * Simple Pendulum 
+
+Observation table       |  MCQ
+:-------------------------:|:-------------------------:
+ <img src="https://github.com/adarshsuresh07/VRlab-web/blob/master/Screenshots/labvr4.png" width="100%"/>|  <img src="https://github.com/adarshsuresh07/VRlab-web/blob/master/Screenshots/labvr5.png" width="100%"/>
+
+
+ * Hooke's Law
+
+Observation table       |  MCQ
+:-------------------------:|:-------------------------:
+ <img src="https://github.com/adarshsuresh07/VRlab-web/blob/master/Screenshots/labvr6.png" width="100%"/>|  <img src="https://github.com/adarshsuresh07/VRlab-web/blob/master/Screenshots/labvr7.png" width="100%"/>
 
 ## Future Scopes
 
