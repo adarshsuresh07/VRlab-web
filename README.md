@@ -61,11 +61,17 @@ There are two types lab sessions as of now:
  
 Signup            |  Login
 :-------------------------:|:-------------------------:
- <img src="https://github.com/adarshsuresh07/VRlab-web/blob/master/Screenshots/Signup.png" width="45%"/>|  <img src="https://github.com/adarshsuresh07/VRlab-web/blob/master/Screenshots/Login page.png" width="45%"/>
+ <img src="https://github.com/adarshsuresh07/VRlab-web/blob/master/Screenshots/Signup.png" width="100%"/>|  <img src="https://github.com/adarshsuresh07/VRlab-web/blob/master/Screenshots/Login page.png" width="100%"/>
+
  - [x] Teacher 
     -  Only access to web application
-    -  View and evaluate results of students
     -  Start an experiment, fetch key and share it to students via another medium.
+
+ <img src="https://github.com/adarshsuresh07/VRlab-web/blob/master/Screenshots/start1.png" width="100%"/>|  <img src="https://github.com/adarshsuresh07/VRlab-web/blob/master/Screenshots/key2.png" width="100%"/>
+    
+    -  View and evaluate results of students
+
+ <img src="https://github.com/adarshsuresh07/VRlab-web/blob/master/Screenshots/Teacherdash.png" width="100%"/>|  <img src="https://github.com/adarshsuresh07/VRlab-web/blob/master/Screenshots/ep1.png" width="100%"/>
 
  - [x] Student
     -  Student can do their experiment using VR application. 
