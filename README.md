@@ -58,6 +58,8 @@ There are two types lab sessions as of now:
 ## Features Implemented
 
  - [x] User(Teacher/ Student) authentication and account verification
+ <img src="https://github.com/adarshsuresh07/VRlab-web/blob/master/Screenshots/Signup.png" width="50%"/>
+ <img src="https://github.com/adarshsuresh07/VRlab-web/blob/master/Screenshots/Login page.png" width="50%"/>
 
  - [x] Teacher 
     -  Only access to web application
@@ -96,7 +98,7 @@ There are two types lab sessions as of now:
  `Adarsh S `  [![github](https://img.icons8.com/material-sharp/24/000000/github.png)][1]      [![portfolio](https://img.icons8.com/material-sharp/24/000000/domain.png)][2]
 
 
-`Aditya D Rajagopal` [![github](https://img.icons8.com/material-sharp/24/000000/github.png)][3]    [![portfolio](https://img.icons8.com/material-sharp/24/000000/domain.png)][4]
+`Aditya D Rajagopal` [![github](https://img.icons8.com/material-sharp/24/000000/github.png)][3] 
 
 
 `Ajay Duth O A` [![github](https://img.icons8.com/material-sharp/24/000000/github.png)][5]  
