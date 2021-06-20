@@ -58,9 +58,10 @@ There are two types lab sessions as of now:
 ## Features Implemented
 
  - [x] User(Teacher/ Student) authentication and account verification
- <img src="https://github.com/adarshsuresh07/VRlab-web/blob/master/Screenshots/Signup.png" width="50%"/>
- <img src="https://github.com/adarshsuresh07/VRlab-web/blob/master/Screenshots/Login page.png" width="50%"/>
-
+ 
+Signup            |  Login
+:-------------------------:|:-------------------------:
+ <img src="https://github.com/adarshsuresh07/VRlab-web/blob/master/Screenshots/Signup.png" width="45%"/>|  <img src="https://github.com/adarshsuresh07/VRlab-web/blob/master/Screenshots/Login page.png" width="45%"/>
  - [x] Teacher 
     -  Only access to web application
     -  View and evaluate results of students
