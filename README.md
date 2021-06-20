@@ -1,6 +1,6 @@
 # LabVR !
 
-LabVR is system of web application and VR application which will help students to do their practical sessions virtually with help of VR and the teachers can monitor it. The web application provides the interface for teacher and student to view and evaluate the experiments. You can see the live web-application here, [LabVR](https://labvr.netlify.app). 
+LabVR is a system of web application and VR application which will help students to do their practical sessions virtually with help of VR and the teachers can monitor it. The web application provides the interface for teacher and student to view and evaluate the experiments. You can see the live web-application here, [LabVR](https://labvr.netlify.app). 
 
  - ***Web Application***
     - https://labvr.netlify.app/
