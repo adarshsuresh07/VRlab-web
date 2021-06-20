@@ -44,7 +44,8 @@ Lets now familiarise LabVR a bit more clearly. LabVR comprises of two applicatio
 
  - ***Web application*** : To start and trackdown an experiment for teacher and student.
  - ***VR application*** : To do an experiment virtually.
-There are two types lab sessions as of now:
+
+There are two types of lab sessions as of now:
  - ***Simple Pendulum*** : To study variation of time period of a simple pendulum of a given length by taking bobs of same size but different masses and interpret the result
  - ***Hooke's Law*** : To prove Hooke’s law i.e. the extension of the force is directly proportional to the force applied.
  - There will be a ***key*** which will be denoting each lab sessions.
@@ -86,6 +87,7 @@ Experiment expansion           |  Clicking on student
     - Then an MCQ (like a viva) will appear and we have to choosing an option will end your lab session with logging you out.
     -  View the results of their previous sessions via web application.
     -  Filter their experiments on the besis of the status (Submitted/Pending).
+
 Student dashboard        |  Clicking on each experiment
 :-------------------------:|:-------------------------:
  <img src="https://github.com/adarshsuresh07/VRlab-web/blob/master/Screenshots/studdash.png" width="100%"/>|  <img src="https://github.com/adarshsuresh07/VRlab-web/blob/master/Screenshots/studdash2.png" width="100%"/>
