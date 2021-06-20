@@ -88,7 +88,7 @@ Experiment expansion           |  Clicking on student
     -  Filter their experiments on the besis of the status (Submitted/Pending).
 Student dashboard        |  Clicking on each experiment
 :-------------------------:|:-------------------------:
- <img src="https://github.com/adarshsuresh07/VRlab-web/blob/master/Screenshots/studdash1.png" width="100%"/>|  <img src="https://github.com/adarshsuresh07/VRlab-web/blob/master/Screenshots/studdash2.png" width="100%"/>
+ <img src="https://github.com/adarshsuresh07/VRlab-web/blob/master/Screenshots/studdash.png" width="100%"/>|  <img src="https://github.com/adarshsuresh07/VRlab-web/blob/master/Screenshots/studdash2.png" width="100%"/>
 
  - [x] VR application
 
@@ -152,6 +152,8 @@ Observation table       |  MCQ
 
 
 ## Note to readers..
+
+This is our final year Btech project. Thanks to my teammates who worked really hard even during this covid19 period and our guide Prof. Vipin Vasu for guiding us and supporting us through out the project.
 
 Thank You ! Have a question or want to reach out?
 
